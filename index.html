@@ -23,7 +23,7 @@
        <div class="col-lg-4 col-sm-12" style=" vertical-align:bottom ; ">
         
         <div class="card  rounded-6 shadow-sm sticky-top" style="background-color: white;">
-            <div class="card-header " style="height: 50%; background-color: rgb(241, 226, 206);">
+            <div class="card-header " style="height: 50%; background-color: rgb(255, 241, 223);">
                 <h1 class="my-0 fw-normal" > users</h1>              
               </div>
               <div class="card-body py-5 text-center" style="vertical-align: bottom ; ">                
@@ -43,7 +43,7 @@
                        
                    
                         <br>
-                        <textarea name="login" id="login" class="form-control" placeholder="your username" ></textarea>
+                        <textarea name="login" id="login" class="form-control" placeholder="your username" inputmode="tel" style="border-radius: 15px; border-color: bisque; height: 35px; justify-content: center; align-items: center; "></textarea>
                         <br>
                        
                    
@@ -58,7 +58,7 @@
        <div class="col-lg-8 col-sm-12" style=" vertical-align:bottom ;">
         
           <div class="card  rounded-6 shadow-sm" style="background-color: white;">
-            <div class="card-header sticky-top" style="height: 50%; background-color:rgb(241, 226, 206);">
+            <div class="card-header sticky-top" style="height: 50%; background-color:rgb(255, 241, 223);">
               <h1 class="my-0 fw-normal" >messages</h1>              
             </div>
              <div class="card-body py-5 text-center" style="vertical-align: bottom ; ">                
@@ -86,13 +86,13 @@
     </div>
     </div>
     <div class="container" style="background-color: black;">
-    <form id="messform" style="position: fixed; align-items: center; right: 0; bottom: 0; padding: 5px; display: flex; width: 100%; background-color: rgb(23, 55, 78);" >
+    <form id="messform" style="position: fixed; align-items: center; right: 0; bottom: 0; padding: 5px; display: flex; width: 100%; background-color: rgb(189, 171, 150);" >
        
         
             <textarea name="message" id="message" class="form-control" placeholder="sample text" rows="1" style="padding: 5px   ; border-radius: 15px; border:none; display: flex;width: 95%; height: 35px;"></textarea>
         
         
-        <input type="submit" value="send" class="  btn btn-sm btn-primary" style="width: 100px; display: flex; border-radius: 15px; border:none; height: 35px; justify-content: center; align-items: center; margin-left: 5px;" >
+        <input type="submit" value="send" class="  btn btn-sm btn-secondary" style="width: 100px; display: flex; border-radius: 15px; border:none; height: 35px; justify-content: center; align-items: center; margin-left: 5px;" >
     
 </div>
 
@@ -117,7 +117,8 @@
                 event.preventDefault();
                 socket.emit('send_mess', $textarea.val());
                 $textarea.val('');
-                
+                $textarea.focusin($textarea);
+                $textarea.focus($textarea);
              
 
 
