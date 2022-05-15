@@ -13,23 +13,22 @@
 </head>
 <body style="font-family: 'Roboto Serif', serif;">
   <br>
-<div class="container "    >
-   
+<div class="container " >
     
     <div class="row  text-center" style=" vertical-align:bottom ; ">
         <br>
-        <h1 id="home">Chat</h1>
+        <h1 id="home">Web socket chat (Socket.io on nodeJS)</h1>
+        <hr>
         <br>
        <div class="col-lg-4 col-sm-12" style=" vertical-align:bottom ; ">
         
         <div class="card  rounded-6 shadow-sm sticky-top" style="background-color: white;">
             <div class="card-header " style="height: 50%; background-color: rgb(255, 241, 223);">
-                <h1 class="my-0 fw-normal" > users</h1>              
+                <h1 class="my-0 fw-normal" > Users</h1>              
               </div>
               <div class="card-body py-5 text-center" style="vertical-align: bottom ; ">                
                 <div class="row my-0 text-center" >
-                                       
-                  
+                 
                 </div>
                 <div class="row my-0 text-center" >
                                        
@@ -40,15 +39,11 @@
                 
                 <div class="row" style="background-color: white;"  >
                     <hr>
-                       
                    
                         <br>
-                        <textarea name="login" id="login" class="form-control" placeholder="your username" inputmode="tel" style="border-radius: 15px; border-color: bisque; height: 35px; justify-content: center; align-items: center; "></textarea>
+                        <textarea name="login" id="login" class="form-controls" placeholder="your username"  style="border-radius: 15px; border-color: bisque; height: 35px; justify-content: center; align-items: center; "></textarea>
                         <br>
-                       
-                   
-                   
-        
+             
                 </div>             
             </div>
 
@@ -57,9 +52,9 @@
        </div>
        <div class="col-lg-8 col-sm-12" style=" vertical-align:bottom ;">
         
-          <div class="card  rounded-6 shadow-sm" style="background-color: white;">
+          <div class="card  rounded-6 shadow-sm" style="background-color: white; min-height: 75vh;">
             <div class="card-header sticky-top" style="height: 50%; background-color:rgb(255, 241, 223);">
-              <h1 class="my-0 fw-normal" >messages</h1>              
+              <h1 class="my-0 fw-normal" >Messages</h1>              
             </div>
              <div class="card-body py-5 text-center" style="vertical-align: bottom ; ">                
                 <div class="row my-0 text-center" >
@@ -71,13 +66,7 @@
                 
                 <div class="row" style="background-color: white;"  >
                     <hr>
-                    
-                    
-
-
-                   
-                   
-        
+                
                 </div>             
             </div>
           </div>
@@ -89,7 +78,7 @@
     <form id="messform" style="position: fixed; align-items: center; right: 0; bottom: 0; padding: 5px; display: flex; width: 100%; background-color: rgb(189, 171, 150);" >
        
         
-            <textarea name="message" id="message" class="form-control" placeholder="sample text" rows="1" style="padding: 5px   ; border-radius: 15px; border:none; display: flex;width: 95%; height: 35px;"></textarea>
+            <textarea name="message" id="message" class="form-control" placeholder="sample text" rows="1" style="   padding: 5px   ; border-radius: 15px; border:none; display: flex;width: 95%; height: 35px;"></textarea>
         
         
         <input type="submit" value="send" class="  btn btn-sm btn-secondary" style="width: 100px; display: flex; border-radius: 15px; border:none; height: 35px; justify-content: center; align-items: center; margin-left: 5px;" >
@@ -125,7 +114,7 @@
                 
             });
             socket.on('send_mess', function(data){
-       $all_messages.append("<div style='background-color:rgb(189, 171, 150);height:20px; border-radius: 15px; border:none; color:white; margin:5px; text-align:left;' >   &nbsp;&nbsp;&nbsp;"  +$login.val() + ": "+ data.msg + "</div>");
+       $all_messages.append("<div style='background-color:rgb(189, 171, 150);height:20px; border-radius: 15px; border:none; color:white; margin:5px; text-align:left; width: fit-content;' >   &nbsp;&nbsp;&nbsp;"  +$login.val() + ": "+ data.msg + "&nbsp;&nbsp;&nbsp;</div>");
       
        window.scrollTo(0,document.body.scrollHeight);
        

@@ -6,6 +6,7 @@ var io = require('socket.io')(server);
 
 server.listen(3000);
 
+
 app.get('/',function(request,respons)
 {
     respons.sendFile(__dirname + '/index.html');
