@@ -1,0 +1,21 @@
+.card-header{
+    border-radius: 15px;
+
+
+}
+.card  rounded-6 shadow-sm sticky-top{
+    border-radius: 15px;
+}
+textarea {
+    padding: 5px   ;
+     border-radius: 15px;
+     border:none; 
+    display: flex;
+    width: 95%;
+     height: 35px;
+}
+#home{
+    font-weight: 100;
+
+
+}
